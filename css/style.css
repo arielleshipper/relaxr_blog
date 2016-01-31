@@ -1,3 +1,194 @@
+*{
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+header{
+    font-family: "Open Sans", sans-serif; 
+    background-color: #033048;
+    overflow: hidden;
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 48px;
+  color: white;
+  float: left;
+  padding-top: 30px;
+  padding-left: 130px;
+}
+
+nav {
+  font-family: "Open Sans", sans-serif;
+  float: right;
+}
+
+nav ul {
+  font-weight: 300;
+  font-size: 24px;
+  color: #f9e42e;
+  list-style: none;
+  padding-top: 40px;
+  padding-right: 200px;
+}
+
+nav li{
+  display: inline;
+  padding-right: 40px;
+}
+
+body{
+  background-color: #f2f2f2;
+}
+
+aside{
+  width: 240px;
+  float: left;
+  color: #033048;
+  margin-left: 40px;
+}
+
+.categories h3{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.categories ul{
+  font-family: "Open Sans", sans-serif;
+}
+
+.about-relaxr p{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: #033048;
+}
+
+.about-relaxr h3{
+  font-weight: 800;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-relaxr a{
+  font-weight: 600;
+  font-size: 22px;
+  color: #033048;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.ad-unit{
+  margin-top: 30px;
+}
+
+.container{
+  font-family: "Open Sans", sans-serif;
+  float: left;
+  margin-left: 130px;
+  width: 700px;
+  margin-top: 20px;
+}
+
+.post h2{
+  font-weight: 600;
+  font-size: 40px;
+  color: #033048;
+}
+
+.post img{
+  clear: both;
+  padding: 15px 0px 15px 0px;
+}
+
+.post span{
+  font-weight: 600;
+  font-size: 60px;
+  color: #606161;
+  float: left;
+  padding: 5px;
+}
+
+.post p{
+  font-weight: 300;
+  font-size: 24px;
+  color: #606161;
+  line-height: 1.25;
+}
+
+.post a{
+  font-weight: 600;
+  font-size: 24px;
+  color: #033048;
+  text-align: right;
+  display: block;
+  bottom-border: 5px;
+  text-decoration: none;
+  margin: 40px 0px 10px 0px;
+}
+
+.post hr{
+  margin-bottom: 20px;
+}
+
+.sign-up {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9e42e;
+  font-weight: 600;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  height: 100px;
+  padding-top: 35px;
+  clear: both;
+  margin-top: 60px;
+}
+
+.sign-up a{
+  background-color: #033048;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 50px 5px 50px;
+}
+
+.footer {
+  font-family: "Open Sans", sans-serif;
+  background-color: #606161;
+  width: 100%;
+  text-align: center;
+  height: 300px;
+  padding-top: 50px;
+  clear: both;
+}
+
+.footer h3{
+  font-weight: 800;
+  font-size: 48px;
+  color: #f9e42e;
+  padding-bottom: 50px;
+}
+
+.footer p{
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  padding-top: 50px;
+}
+
+.footer img{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
 /*
 Project Name: Relaxr Blog
 Author: Your Name
