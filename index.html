@@ -9,6 +9,7 @@
 	<meta name="keywords" content="relaxr, blog, personal assistant">
 	<meta name="author" content="Relaxr team">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,800' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 
 <header>
@@ -34,8 +35,10 @@
 	<br>
 	<img src="images/blog_photo1.jpg">
 	<span>L</span>
-	<p>Gochujang hammock venmo blue bottle pork belly food truck pitchfork microdosing, kinfolk typewriter vice fashion axe sartorial. Chartreuse etsy portland dreamcatcher, mlkshk gentrify godard kitsch cardigan lumbersexual crucifix banjo. Banjo wolf taxidermy normcore williamsburg schlitz. Quinoa freegan selvage, PBR&nbsp;B mustache tilde messenger bag direct trade asymmetrical heirloom helvetica literally irony. Deep v vinyl DIY green juice, semiotics bitters kale chips. Meh kitsch cold-pressed lomo, disrupt tilde readymade fashion axe post-ironic messenger bag ramps twee gentrify. Keytar celiac fixie mumblecore skateboard.</p>
-	<a href="TKTKTKTK">Read more &#62;</a>
+	<p>Gochujang hammock venmo blue bottle pork belly food truck pitchfork microdosing, kinfolk typewriter vice fashion axe sartorial. Chartreuse etsy portland dreamcatcher, mlkshk gentrify godard kitsch cardigan lumbersexual crucifix banjo. Banjo wolf taxidermy normcore williamsburg schlitz. Quinoa freegan selvage, PBR&nbsp;B mustache tilde messenger bag direct trade asymmetrical heirloom helvetica literally irony. Deep v vinyl DIY green juice, semiotics bitters kale chips. Meh kitsch cold-pressed lomo, disrupt tilde readymade fashion axe post-ironic messenger bag ramps twee gentrify. Keytar celiac fixie mumblecore skateboard.</p><br>
+	<p id="hidden-paragraph-1">I'm a hidden paragraph. Fanny pack cornhole art party kogi plaid meggings. Pork belly master cleanse blue bottle pabst, ethical quinoa etsy farm-to-table. Street art pop-up kickstarter heirloom kale chips aesthetic, normcore hella freegan beard fashion axe gentrify health goth 8-bit. Yuccie cray fap man braid tacos, ethical wayfarers.</p>
+	<a id="read-more-1" href="TKTKTKTK">Read more &#62;</a>
+	<a id="read-less-1" href="TKTKTKTK">Read Less &#62;</a>
 	<br>
 	<hr>
 	<br>
@@ -46,8 +49,10 @@
 	<br>
 	<img src="images/blog_photo2.jpg">
 	<span>L</span>
-	<p>Dreamcatcher +1 ennui iPhone. Kogi brunch humblebrag, retro synth small batch raw denim pour-over pug letterpress chambray marfa. Quinoa sustainable tacos street art church-key green juice fashion axe pour-over, crucifix locavore try-hard. Sustainable gluten-free seitan selvage, master cleanse cold-pressed stumptown organic sartorial kogi pabst. Cred godard pitchfork microdosing, mumblecore pour-over sriracha distillery. Humblebrag vice crucifix typewriter, roof party post-ironic celiac lumbersexual health goth butcher. Cred intelligentsia knausgaard, stumptown kitsch master cleanse readymade lo-fi vegan pug tilde disrupt.</p>
-	<a href="TKTKTKTK">Read more &#62;</a>
+	<p>Dreamcatcher +1 ennui iPhone. Kogi brunch humblebrag, retro synth small batch raw denim pour-over pug letterpress chambray marfa. Quinoa sustainable tacos street art church-key green juice fashion axe pour-over, crucifix locavore try-hard. Sustainable gluten-free seitan selvage, master cleanse cold-pressed stumptown organic sartorial kogi pabst. Cred godard pitchfork microdosing, mumblecore pour-over sriracha distillery. Humblebrag vice crucifix typewriter, roof party post-ironic celiac lumbersexual health goth butcher. Cred intelligentsia knausgaard, stumptown kitsch master cleanse readymade lo-fi vegan pug tilde disrupt.</p><br>
+	<p id="hidden-paragraph-2">I'm a hidden paragraph. Fanny pack cornhole art party kogi plaid meggings. Pork belly master cleanse blue bottle pabst, ethical quinoa etsy farm-to-table. Street art pop-up kickstarter heirloom kale chips aesthetic, normcore hella freegan beard fashion axe gentrify health goth 8-bit. Yuccie cray fap man braid tacos, ethical wayfarers.</p>
+	<a id="read-more-2" href="TKTKTKTK">Read more &#62;</a>
+	<a id="read-less-2" href="TKTKTKTK">Read Less &#62;</a>
 	<br>
 	<hr>
 	<br>
@@ -74,8 +79,9 @@
 <div class="about-relaxr">
 
 	<h3>About Relaxr</h3>
-	<p>Fashion axe beard four dollar toast crucifix kale chips, bicycle rights hoodie banjo.</p>
-	<a href="TKTKTKTK">Learn More</a>
+	<p>Fashion axe beard four dollar toast crucifix kale chips, bicycle rights hoodie banjo.<span id="extra-text">I'm an extra line of text.</span></p>
+	<a id="learn-more" href="TKTKTKTK">Learn More</a>
+	<a id="learn-less" href="TKTKTKTK">Learn Less</a>
 
 </div>
 
@@ -88,7 +94,7 @@
 </aside>
 
 <div class="sign-up">
-	<a href="TKTKTKTK">Sign Up Now!</a>
+	<a id="signUp" href ="TKTKTKTK">Sign Up Now!</a>
 </div>
 
 <div class="footer">
@@ -97,6 +103,72 @@
 	<img src="images/facebook.png" alt="facebook">
 	<p>Copyright 2015. Relaxr.</p>
 </div>
+
+<script>
+$('.sign-up').click(function(){
+	alert("We're not taking sign-ups yet.");
+	$("#signUp").text("No More Signups!");
+	$("#signUp").css('background-color', 'gray');
+	$("#signUp").removeAttr('href');
+});
+
+/*$('#read-more').click(function(){
+	slideDown('')
+});*/
+
+$(document).ready(function(){
+	$("#read-less-1").hide();
+	$("#read-less-2").hide();
+	$("#hidden-paragraph-1").hide();
+	$("#hidden-paragraph-2").hide();
+	$("#extra-text").hide();
+	$("#learn-less").hide();
+});
+
+$("#read-more-1").click(function(){
+        $("#hidden-paragraph-1").slideDown();
+		$("#read-less-1").show();
+		$("#read-more-1").hide();
+		$("#read-more-1").removeAttr('href');
+    });
+
+$("#read-less-1").click(function(){
+        $("#hidden-paragraph-1").slideUp();
+		$("#read-more-1").show();
+		$("#read-less-1").hide();
+		$("#read-less-1").removeAttr('href');
+    });
+
+$("#read-more-2").click(function(){
+        $("#hidden-paragraph-2").slideDown();
+		$("#read-less-2").show();
+		$("#read-more-2").hide();
+		$("#read-more-2").removeAttr('href');
+    });
+
+$("#read-less-2").click(function(){
+        $("#hidden-paragraph-2").slideUp();
+		$("#read-more-2").show();
+		$("#read-less-2").hide();
+		$("#read-less-2").removeAttr('href');
+    });
+
+$("#learn-more").click(function(){
+	$("#extra-text").slideDown();
+	$("#learn-less").show();
+	$("#learn-more").hide();
+	$("#learn-more").removeAttr('href');
+});
+
+$("#learn-less").click(function(){
+	$("#extra-text").slideUp();
+	$("#learn-less").hide();
+	$("#learn-more").show();
+	$("#extra-text").hide();
+	$("#learn-less").removeAttr('href');
+});
+
+</script>
 
 </body>
 
